@@ -1,0 +1,173 @@
+{
+  "GENERAL": {
+    "LIMIT_ACCOUNT": "Tu membresía ha experido, recuerda activar tu cuenta aquí.",
+    "VIEW_MORE": "Ver más",
+    "NEXT_PAGINATE": "Siguiente",
+    "PREV_PAGINATE": "Anterior",
+    "ERROR_404": "Lo sentimos esta pagina no existe, o estamos trabajando en ella",
+    "CURRENCY": " ",
+    "CURRENCY_SYMBOL": "",
+    "GO_HOME": "Volver a inicio",
+    "SAVE": "Guardar",
+    "LOADING": "Cargando información",
+    "LOADING_SINGLE": "Cargando",
+    "LIST": "Lista",
+    "ADD": "Agregar",
+    "PROVIDER": "Proveedor",
+    "DELETE": "Eliminar",
+    "EMPTY": "Sin resultados",
+    "UPGRADE": "Proximamente",
+    "DROP": "Arrastra y suelta las imagenes",
+    "FILES_ALLOW": "Formatos permitidos .jpg .jpeg .png",
+    "NOT_ALLOWED": "No tienes permisos",
+    "ERROR_CODE": "Código",
+    "ERROR": "¡Algo sucedio!",
+    "QTY": "Cantidad",
+    "PRICES": "Precio",
+    "ERROR_MESSAGE": "Mensaje",
+    "ARE_YOU_SURE": "¿Estas seguro?",
+    "ARE_YOU_SURE_SENTENCE": "Los cambios no pueden revertirse",
+    "OK": "OK",
+    "ANY_ISSUE": "¿Algun problema? Contactanos",
+    "BETA_TITLE": "Versión Beta",
+    "NOTICE_BETA": "Actualmente estás participando en una versión de prueba sin costo. Te notificaremos cuando acabe el periodo de gracia.",
+    "SUB_NOTICE_BETA": "Gracias por participar",
+    "ACCEPT": "Entendido"
+  },
+  "WIZARD": {
+    "FORM": {
+      "DRAG_ZONE": "Subir logo",
+      "COMPANY": "Nombre de empresa",
+      "COMPANY_PLACEHOLDER": "Ingresa el nombre de tu empresa",
+      "LOGO": "Logo",
+      "LOGO_PLACEHOLDER": "Formatos permitidos .jpg, .jpeg, .png",
+      "CURRENCY": "Divisa",
+      "CURRENCY_SYMBOL": "Simbolo de divisa",
+      "CURRENCY_SYMBOL_PLACEHOLDER": "Dejar vacio de no tener. Ejemplo $, €",
+      "CURRENCY_PLACEHOLDER": "Ingresa la nomenclatura de tu divisa, Ejemplo: (MXN, EUR, USD)"
+    },
+    "TITLE": "Configuración rápida",
+    "CONTENT": "Nuestro asistente te guiará para la configuración rápida de tu panel. Solo tomará 1 minuto"
+  },
+  "HOME": {
+  },
+  "LOGIN": {
+    "WELCOME": "Bienvenido",
+    "SUB_TITLE": "Lleva tu inventario de forma inteligente y ágil.",
+    "FORM": {
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Ingresa el email que tienes registrado",
+      "PASSWORD": "Contraseña",
+      "PASSWORD_PLACEHOLDER": "Ingresa tu contraseña, mantén en un lugar seguro tus accesos",
+      "SEND": "Ingresar"
+    }
+  },
+  "PRODUCT": {
+    "NAME": "Nombre de producto",
+    "PROVIDER": "Proveedor",
+    "SKU": "SKU",
+    "DEPOSIT": "Deposito",
+    "CATEGORIES": "Categorias",
+    "PRICES": "Precios",
+    "TAG": "Etiquetas",
+    "ADD": "Agregar",
+    "AUTHOR": "Subida por",
+    "DESCRIPTION": "Descripcion"
+  },
+  "PURCHASE": {
+    "CUSTOMER": "Cliente",
+    "SEARCH_PRODUCT": "Escribe...",
+    "ADDRESS": "Dirección de envio",
+    "DELIVERY_TYPE": "Envio",
+    "STATUS": "Estatus",
+    "TAG": "Etiquetas",
+    "ADD": "Agregar",
+    "AUTHOR": "Subida por",
+    "DESCRIPTION": "Descripcion",
+    "TITLE": "Pedido",
+    "TAB": "Detalles",
+    "TOTAL": "TOTAL",
+    "DATE": "Fecha",
+    "ITEM": "Articulo",
+    "PRICE": "Precio",
+    "QTY": "Cantidad",
+    "ADD_PRODUCT": "Agregar producto",
+    "ADD_PRODUCT_PLACEHOLDER": "Haz clik para comenzar agregar articulos al pedido"
+  },
+  "PROVIDER": {
+    "NEW_PROVIDER": "Crear proveedor",
+    "SEARCH_PRODUCT": "Escribe...",
+    "NAME": "Nombre de empresa",
+    "ADDRESS": "Dirección de empresa",
+    "EMAIL": "Email de empresa",
+    "PHONE": "Teléfono de empresa",
+    "DESCRIPTION": "Observación",
+    "MANAGER": "Persona de contacto",
+    "TAG": "Etiquetas",
+    "ADD": "Agregar"
+  },
+  "DEPOSITS": {
+    "SEARCH_PRODUCT": "Escribe...",
+    "NEW_DEPOSITS": "Crear deposito",
+    "NAME": "Nombre de deposito",
+    "ADDRESS": "Dirección de deposito",
+    "EMAIL": "Email de deposito",
+    "PHONE": "Teléfono de deposito",
+    "DESCRIPTION": "Observación",
+    "MANAGER": "Encargado",
+    "TAG": "Etiquetas",
+    "ADD": "Agregar"
+  },
+  "USER": {
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "EMAIL": "Email",
+    "NIE": "Numero de identificacion",
+    "PHONE": "Teléfono",
+    "AVATAR": "Avatar",
+    "ADDRESS": "Direccion",
+    "ROL": "Rol",
+    "DESCRIPTION": "Observación",
+    "MANAGER": "Encargado",
+    "PASSWORD": "Contraseña",
+    "TAG": "Etiquetas",
+    "ADD": "Agregar"
+  },
+  "INVENTORY": {
+    "SEARCH_PRODUCT": "Escribe el producto...",
+    "PRODUCT": "Producto",
+    "PROVIDER": "Proveedor",
+    "QTY": "Inventario",
+    "PRICE_BASE": "Precio costo",
+    "DEPOSIT": "Deposito",
+    "DESCRIPTION": "Observación",
+    "TAG": "Etiquetas"
+  },
+  "COPILOT": {
+    "SKIP": "Saltar",
+    "OK": "Entendido",
+    "SWIPE_LEFT_LIST_ITEM": "Desliza hacia la izquierda los elementos de la lista, para acceder a más opciones",
+    "SECTION_BTN": {
+      "ADD": "Agregar un nuevo registro",
+      "LIST": "Pudes ver todos los registros guardados haciendo click en el boton de 'Lista'",
+      "TRASH": "Borra facilmente, desde aquí",
+      "SAVE": "¡No olvides guardar! El icono en <span class='badge badge-danger'>rojo</span> indica que falta algun campo requerido."
+    }
+  },
+  "SEARCH": {
+    "USERS": "Usuarios",
+    "PRODUCTS": "Productos",
+    "DEPOSITS": "Depositos",
+    "PURCHASES": {
+      "TITLE": "Pedidos",
+      "DATE": "Fecha",
+      "CONTROL": "Número de pedido"
+    },
+    "PROVIDERS": "Proveedores"
+  },
+  "UPGRADE": {
+    "TITLE": "Actualización disponible",
+    "UPGRADE_OK": "Actualizar",
+    "CONTENT": " <p>Actualizaciones disponibles las cuales mejoraran tu experiencia de usuario y performance de la app. Para aplicar estas actualizaciones solo debes hacer click o esperar unos segundos.</p><p>Si tienes algún problema puedes enviarnos un <a href='#'>ticket</a> en el apartado</p>"
+  }
+}

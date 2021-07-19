@@ -1,0 +1,56 @@
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+and (min-width: 320px)
+and (max-width: 768px) {
+  .container-row {
+    padding: 4rem 0rem 1rem 4rem;
+  }
+
+  .container-wrapper {
+    padding-left: .25rem !important;
+    padding-right: .25rem !important;
+  }
+
+  .container-wrapper .col-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .container-row .items-wrapper {
+    padding-left: .25rem !important;
+    padding-right: .25rem !important;
+  }
+
+
+  .left-swipe {
+    transform: translate(-22vw, 0) !important;
+  }
+
+  .detail-invoice tabset ul {
+    display: none !important;
+  }
+
+  .detail-invoice .tab-content {
+    padding-top: 0 !important;
+  }
+
+  .price-amount {
+    font-size: 80% !important;
+  }
+
+  app-detail-invoice{
+    padding: 0 !important;
+  }
+
+  .btn-default-trash{
+    right: auto !important;
+    position: relative !important;
+  }
+
+  .wrapper{
+    width: 80vw !important;
+  }
+
+}

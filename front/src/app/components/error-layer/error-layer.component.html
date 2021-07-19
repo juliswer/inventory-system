@@ -1,0 +1,93 @@
+<div *ngIf="error" #btnClose class="overlay-loading">
+  <!--  <div (click)="close()" class="close-icon btn btn-round btn-shadow">-->
+  <!--    <fa-icon size="lg" [icon]="faTimes"></fa-icon>-->
+  <!--  </div>-->
+  <app-button-progress class="close-icon"
+
+                       (click)="close()"
+                       (cbClose)="test()"
+                       width="50px">
+  </app-button-progress>
+  <div class="in text-center">
+    <b>{{'GENERAL.ERROR' |translate}}</b>
+    <br>
+
+    <!-- *************** ERROR 409 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 409"
+      class="margin-auto"
+      width="100px"
+      [options]="error409">
+    </ng-lottie>
+
+    <!-- *************** ERROR 404 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 404"
+      class="margin-auto"
+      width="100px"
+      [options]="error404">
+    </ng-lottie>
+
+    <!-- *************** ERROR 422 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 422"
+      class="margin-auto"
+      width="100px"
+      [options]="error422">
+    </ng-lottie>
+
+    <!-- *************** ERROR 401 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 401"
+      class="margin-auto"
+      width="100px"
+      [options]="error401">
+    </ng-lottie>
+
+    <!-- *************** ERROR 402 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 402"
+      class="margin-auto"
+      width="100px"
+      [options]="error402">
+    </ng-lottie>
+
+    <!-- *************** ERROR 406 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 406"
+      class="margin-auto"
+      width="180px"
+      [options]="error406">
+    </ng-lottie>
+
+
+    <!-- *************** ERROR 400 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 400"
+      class="margin-auto"
+      width="100px"
+      [options]="error400">
+    </ng-lottie>
+
+
+    <!-- *************** ERROR 0 ************** --->
+    <ng-lottie
+      *ngIf="error?.code === 0"
+      class="margin-auto"
+      width="100px"
+      [options]="error0">
+    </ng-lottie>
+
+    <div>
+      <small class="text-muted bg-white text-center">
+
+        {{'GENERAL.ERROR_CODE' | translate}}: <b>{{error?.code}}</b> <br>
+        {{'GENERAL.ERROR_MESSAGE' | translate}}:
+
+        <b *ngIf="error?.e.length">{{error?.e?.errors?.msg}}</b>
+        <b *ngIf="!error?.e.length && error?.message">{{error?.message}}</b>
+      </small>
+    </div>
+
+  </div>
+</div>

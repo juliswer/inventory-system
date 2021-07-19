@@ -1,0 +1,101 @@
+<ng-container *ngIf="mode === 'page'">
+  <app-header [history]="history"></app-header>
+  <app-side-bar></app-side-bar>
+
+</ng-container>
+<div class="w-100" [ngClass]="{'container-row d-flex':(mode === 'page')}">
+  <div *ngIf="mode === 'home'" class="col-12 mb-2">
+    <b class="text-muted">{{title}}</b>
+  </div>
+  <app-list-items
+    (cbAdd)="goTo()"
+    [(data)]="data"
+    [mode]="cbMode"
+    [customTemplate]="customTemplateSrc"
+    (cbSrc)="onSrc($event)"
+    class="col-12 row m-0 pl-2" [ngClass]="{'pr-4':(mode === 'list'),
+    'pr-0':(mode === 'home')}">
+  </app-list-items>
+</div>
+
+<!-- ************ PAGINATE BUTTON ************  -->
+
+<div *ngIf="viewMore" class="w-100">
+  <div (click)="paginate()" class="col-12 text-center p-4 d-flex justify-content-center">
+    <button type="button" class="btn btn-paginate btn-view-more">{{'GENERAL.VIEW_MORE'|translate}}</button>
+  </div>
+</div>
+
+<!-- ************ PAGINATE BUTTON ************  -->
+
+<!-- ***************** TEMPLATE ************** -->
+<ng-template #customTemplateSrc let-dat='dat'>
+  <ul [@listAnimation] *ngIf="dat?.length">
+    <li *ngFor="let inside of dat" (click)="goToDetail(inside)"
+        class="d-flex item-list-single justify-content-between">
+      <div class="d-flex">
+        <div class="d-none d-md-block">
+          <div>
+            <img class="img-50" onerror="this.style.display='none'"
+                 [src]="inside?.product?.gallery | firstImage:'large'" alt="">
+            <!--          <ngx-avatar-->
+            <!--            (error)="s($event)"-->
+            <!--            *ngIf="inside?.gallery | firstImage:'large'"-->
+            <!--                      [src]="inside?.gallery | firstImage:'large'">-->
+            <!--          </ngx-avatar>-->
+
+            <ngx-avatar [name]="inside?.name"
+                        *ngIf="!(inside?.product?.gallery | firstImage:'large')">
+            </ngx-avatar>
+          </div>
+        </div>
+
+        <div class="p-1 pt-2">
+          <fa-icon class="arrow-icon-colors-up" *ngIf="inside?.qty > 0"
+                   [icon]="faLongArrowAltUp" size="2x">
+          </fa-icon>
+          <fa-icon class="arrow-icon-colors-down" *ngIf="inside?.qty < 0"
+                   [icon]="faLongArrowAltDown" size="2x">
+          </fa-icon>
+        </div>
+        <div class="pl-2 pr-2 pt-1 pb-1">
+          <div class="d-flex">
+
+            <h6 class="name mr-2">{{inside?.product?.name}}
+              <span *ngIf="inside?.provider?.name">({{inside?.provider?.name}})</span>
+            </h6>
+            <small class="text-muted mr-1 d-none d-md-block" [tooltip]="inside?.createdAt | date"
+                   timeago [date]="inside?.createdAt"></small>
+            <span class="badge-tag badge mr-1" *ngFor="let tag of inside?.tag">
+              {{tag?.name}}
+            </span>
+          </div>
+          <div class="d-none d-md-block">
+            <div class="d-flex pt-1 ">
+            <span class="text-muted">
+              <fa-icon [icon]="faUser"></fa-icon>
+              {{inside?.author?.name}}
+            </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="text-right ">
+        <div>
+          <b class="price-main">{{inside?.manager?.name}} {{inside?.manager?.lastName}}</b>
+        </div>
+        <div class="m-2">
+          <h6 class="m-0 text-hover font-weight-bold" [ngClass]="{
+          'text-success':(inside?.qty>0),
+          'text-danger':(inside?.qty<0)
+          }">
+            <span *ngIf="inside?.qty >0">+</span>
+            {{inside?.qty}}</h6>
+          <small class="text-muted">{{"INVENTORY.QTY" |translate}}</small>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>
+<!-- ***************** FIN TEMPLATE ************** -->

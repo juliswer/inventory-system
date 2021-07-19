@@ -1,0 +1,69 @@
+<ng-container *ngIf="mode === 'page'">
+  <app-header [history]="history"></app-header>
+  <app-side-bar></app-side-bar>
+
+</ng-container>
+<div class="w-100" [ngClass]="{'container-row d-flex':(mode === 'page')}">
+  <div *ngIf="mode === 'home'" class="col-12 mb-2">
+    <b class="text-muted">{{title}}</b>
+  </div>
+  <app-list-items
+    (cbAdd)="goTo()"
+    [(data)]="data"
+    [mode]="cbMode"
+    [customTemplate]="customTemplateSrc"
+    (cbSrc)="onSrc($event)"
+    class="col-12 row m-0 pl-2" [ngClass]="{'pr-4':(mode === 'list'),
+    'pr-0':(mode === 'home')}">
+  </app-list-items>
+</div>
+
+
+<!-- ************ PAGINATE BUTTON ************  -->
+
+<div *ngIf="viewMore" class="w-100">
+  <div (click)="paginate()" class="col-12 text-center p-4 d-flex justify-content-center">
+    <button type="button" class="btn btn-paginate btn-view-more">{{'GENERAL.VIEW_MORE'|translate}}</button>
+  </div>
+</div>
+
+<!-- ************ PAGINATE BUTTON ************  -->
+
+<!-- ***************** TEMPLATE ************** -->
+<ng-template #customTemplateSrc let-dat='dat'>
+  <ul  [@listAnimation] *ngIf="dat?.length">
+    <li *ngFor="let inside of dat" (click)="emitCbClick(inside)" class="col-12 row ml-0 mr-0">
+      <div class="col-md-10 col-lg-10 col-sm-10 pl-0 pr-0">
+        <div class="d-flex ">
+          <ngx-avatar class="d-none d-md-block" [name]="inside?.name"
+                      *ngIf="!(inside?.gallery | firstImage:'small')">
+          </ngx-avatar>
+          <div class="w-100">
+            <h6 class="name mr-2 ml-1">{{inside?.name}}</h6>
+            <div class="ml-1 mt-1 badge-zone" *ngIf="inside?.tag?.length">
+                <span class="badge-tag badge mr-1 " *ngFor="let tag of inside?.tag">
+                {{tag?.name}}
+              </span>
+            </div>
+            <div class="ml-1 mt-1" *ngIf="inside?.prices?.length">
+                <span class="badge-tag-price badge mr-2" *ngFor="let price of inside?.prices">
+                  {{currencySymbol}} {{price?.amount | number:'1.2-2'}} {{currency}}
+                </span>
+            </div>
+          </div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-2 col-sm-2  text-right">
+        <h6 class="m-0 text-hover font-weight-bold" [ngClass]="{
+                  'text-danger':(inside?.qty<=0)
+                  }">{{inside?.qty}}</h6>
+        <small class="text-muted">{{"INVENTORY.QTY" |translate}}</small>
+      </div>
+    </li>
+  </ul>
+</ng-template>
+<!-- ***************** FIN TEMPLATE ************** -->

@@ -1,0 +1,56 @@
+<div class="pt-2 pb-2 header-wrapper">
+  <div class="d-flex justify-content-between">
+    <div class="w-50" [routerLink]="['/']">
+      <ul class="history-menu" *ngIf="!limitAccount">
+        <li>{{title}}</li>
+        <li *ngFor="let a of history" [routerLink]="a.router">
+          <fa-icon size="lg" [icon]="faAngleRight"></fa-icon>
+          <span class="ml-1">{{a?.name}}</span>
+        </li>
+      </ul>
+      <div class="notice-account" *ngIf="limitAccount">
+        {{'GENERAL.LIMIT_ACCOUNT' | translate}}
+      </div>
+    </div>
+    <div class="d-none w-50 d-sm-block">
+      <div class="d-flex justify-content-around section-search col-md-12 col-lg-12 col-sm-12">
+        <form [formGroup]="form" (submit)="search()"  class="w-100">
+          <div class="input-group src-input">
+            <input type="text" formControlName="q" placeholder="Buscar" class="form-control" aria-label="Default"
+                   aria-describedby="inputGroup-sizing-default">
+
+            <div class="btn-group input-group-prepend" dropdown>
+              <div class="radius-btn">
+                  <span class="input-group-text btn-icon dropdown-toggle input-src-button-group" dropdownToggle
+                        id="inputGroup-sizing-default">Todo</span>
+              </div>
+
+<!--              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu menu-options-header"-->
+<!--                  role="menu" aria-labelledby="button-basic">-->
+<!--                <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                <li class="divider dropdown-divider"></li>-->
+<!--                <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>-->
+<!--                </li>-->
+<!--              </ul>-->
+            </div>
+          </div>
+        </form>
+
+
+        <div class="list-menu-header">
+          <ul>
+            <li [routerLink]="a?.route" *ngFor="let a of menu">
+              <div class="icon-list-menu mr-1 ml-1">
+                <fa-icon [icon]="a.icon"></fa-icon>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

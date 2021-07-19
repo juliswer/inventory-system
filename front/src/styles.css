@@ -1,0 +1,743 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400;1,500&display=swap');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  background-color: #F6F5FA;
+  font-size: .85rem;
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none; /* Ocultar scroll */
+}
+
+.container-row {
+  padding: 5rem 0rem 1rem 5rem;
+  flex-wrap: wrap;
+}
+
+.customToolTip {
+  z-index: 999 !important;
+}
+
+.avatar-content {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.customToolTip .tooltip-inner {
+  background-color: #221ECD;
+  color: #fff;
+  font-weight: 400;
+  padding: .1rem .2rem;
+  letter-spacing: .5px;
+  font-size: .65rem;
+  box-shadow: 0 0 5px rgba(55, 51, 209, 0.56);
+}
+
+bs-tooltip-container {
+  pointer-events: auto !important;
+}
+
+.btn-copilot {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.42);
+  border: 0;
+  border-radius: .25rem;
+  color: white;
+}
+
+.btn-copilot:hover {
+  transform: scale(1.05);
+}
+
+.customToolTip.bs-tooltip-top .arrow::before {
+  border-top-color: #221ECD !important;
+}
+
+.customToolTip.bs-tooltip-top .arrow::before {
+  border-top-color: #221ECD !important;
+
+}
+
+.customToolTip.bs-tooltip-left .arrow::before {
+  border-left-color: #221ECD !important;
+
+}
+
+.customToolTip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #221ECD !important;
+}
+
+.customToolTip.bs-tooltip-right .arrow::before {
+  border-right-color: #221ECD !important;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #E1DFEA !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #E1DFEA !important;
+}
+
+::placeholder {
+  color: #E1DFEA !important;
+}
+
+.btn-radius {
+  border-radius: 1rem !important;
+}
+
+.btn-primary {
+  background-color: #221ECD !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.detail-invoice .nav-tabs {
+  border-bottom: solid 1px #f2f3fd;
+  padding-bottom: .75rem;
+  padding-top: .5rem;
+}
+
+.detail-invoice .tab-content {
+  padding: 1rem .25rem;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  /*padding: .35rem .65rem;*/
+  background-color: #918CE7;
+  border-radius: 1rem;
+  color: white;
+  border-color: transparent;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.nav-link {
+  padding: .25rem;
+  font-size: .8rem;
+}
+
+.nav-tabs .nav-item {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.theme-green {
+  background-color: transparent;
+}
+
+.theme-green .bs-calendar-container {
+  background-color: white;
+  box-shadow: 0 0 20px #dddee2;
+  border: solid 1px #efefef;
+}
+
+.bs-datepicker {
+  box-shadow: 0 0 0 transparent;
+}
+
+.theme-green .bs-datepicker-head, .theme-green .bs-datepicker-body table td span.selected {
+  background-color: #221CC5;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  color: #221CC5;
+}
+
+.text-primary {
+  color: #221ECD !important;
+}
+
+.img-section .margin-auto {
+  margin: auto;
+  display: inline-table;
+}
+
+.img-section ng-lottie div {
+  margin: auto !important;
+}
+
+/**
+Style
+ */
+.custom-card-style {
+  background-color: white;
+  padding: .5rem 1rem;
+  border-radius: .75rem;
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: .6px;
+  box-shadow: 1px 3px 0px #EEEFF6;
+}
+
+.NgxEditor-Wrapper {
+  overflow: auto;
+  height: 30rem;
+  border: 0px solid rgba(0, 0, 0, .2) !important;
+}
+
+.NgxEditor-Wrapper-full-width {
+  position: fixed;
+  top: 0;
+  /* background: red; */
+  z-index: 99;
+  left: 0;
+  height: 100%;
+  padding: 2rem .5rem 0rem .5rem;
+}
+
+.chip-price tag {
+  background-color: #D4CDFD !important;
+}
+
+.chip-price tag:hover {
+  box-shadow: 2px 3px 3px 0px #EAEBF3 !important;
+}
+
+.ng-select .ng-select-container {
+  border: 0 !important;
+}
+
+.btn-secondary {
+  background-color: #D4CDFD !important;
+  border: solid 0px #221ECE !important;
+}
+
+input.form-control.ng-invalid,
+.ng-select.ng-invalid, .ng-invalid-red,
+.ng-invalid > .ql-container,
+.ng-invalid > tag-input-form {
+  border: solid 1px transparent !important;
+  box-shadow: 2px 1px 0px #ffc0c0 !important;
+  border-radius: 1rem !important;
+  background-color: #fff2f4 !important;
+}
+
+tag-input-form input {
+  background-color: transparent !important;
+}
+
+.min-height-style {
+  min-height: 400px !important;
+}
+
+.custom-card-style-section {
+  padding-bottom: 1rem !important;
+  padding-top: 0 !important;
+}
+
+.custom-card-style-section .tabs {
+  /*background: red;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge-zone {
+  max-height: 20px;
+  overflow: hidden;
+}
+
+h6.name {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block !important;
+  text-overflow: ellipsis;
+}
+
+.btn-round {
+  cursor: pointer;
+  background-color: white;
+  bordeR: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 4rem;
+  text-align: center;
+}
+
+.btn-shadow {
+  box-shadow: 0 0 15px rgba(179, 186, 204, 0.6);
+}
+
+.items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items ul li {
+  cursor: pointer;
+  background-color: white;
+  padding: .5rem .5rem;
+  font-size: .8rem;
+  border-radius: .75rem;
+  margin-top: .8rem;
+  box-shadow: 1px 3px 0px #EEEFF6;
+}
+
+.items ul li .avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5rem;
+  border: solid 2px #EEEFF6;
+}
+
+.items ul li .item-list-single {
+  /*font-size: .8rem;*/
+}
+
+.items .item-list-single:hover .badge-tag {
+  background-color: transparent;
+  color: white !important;
+  border-color: white !important;
+}
+
+.items ul li .name {
+  font-size: .8rem !important;
+  font-weight: 600;
+  color: #505050;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.items ul li:hover {
+  transform: scale(1.01);
+  z-index: 9;
+  background-color: #221ECD;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.items ul li:hover .badge-tag-price {
+  color: white;
+}
+
+.items ul li:hover .name {
+  color: white;
+}
+
+.items ul li:hover .price-main,
+.items ul li:hover .text-muted,
+.items ul li:hover .badge-green,
+.items ul li:hover .arrow-icon-colors-up,
+.items ul li:hover .arrow-icon-colors-down,
+.items ul li:hover .text-hover {
+  color: rgba(255, 255, 255, .8) !important;
+}
+
+.items ul li .avatar {
+  border: solid 2px rgba(255, 255, 255, 0.42)
+}
+
+.ng2-tag-input.ng2-tag-input--focused {
+  border-bottom: 2px solid #ddd8ee !important;
+}
+
+.ng-select-container {
+  background-color: transparent !important;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.33)
+}
+
+.modal-backdrop.show {
+  opacity: .7;
+}
+
+.modal-light-plan {
+  max-width: 700px;
+}
+
+
+.modal-profile-small {
+  max-width: 500px;
+}
+
+.modal-profile-small .modal-content {
+  border-radius: 1rem;
+  min-height: 10rem;
+  box-shadow: 1px 3px 17px rgba(110, 110, 110, 0.32);
+  padding: .5rem;
+  border: solid 1px #f6f6f6;
+}
+
+.modal-light-upgrade {
+  max-width: 600px;
+}
+
+.modal-light-upgrade .modal-content {
+  border-radius: 1rem;
+  min-height: 10rem;
+  box-shadow: 1px 3px 17px rgba(110, 110, 110, 0.32);
+  padding: .5rem;
+  border: solid 1px #f6f6f6;
+}
+
+
+.modal-light-plan .modal-content {
+  border-radius: 1rem;
+  min-height: 10rem;
+  box-shadow: 1px 3px 17px rgba(110, 110, 110, 0.32);
+  padding: .5rem;
+  border: solid 1px #f6f6f6;
+}
+
+.badge-tag {
+  border: solid 1px #ffcdab;
+  border-radius: 1rem;
+  padding: .2rem .3rem;
+  background-color: rgba(255, 255, 255, .8);
+  font-weight: 600;
+  text-align: center;
+  color: #737373;
+}
+
+.badge-prices {
+  border: solid 1px #eaeaea;
+  border-radius: 1rem;
+  padding: .2rem .3rem;
+  background-color: rgba(255, 255, 255, .8);
+  font-weight: 600;
+  text-align: center;
+  color: #737373;
+}
+
+.description-card .ql-snow {
+  border: solid 0px red !important;
+}
+
+.item-list-single .arrow-icon-colors-up {
+  color: #2CA42E;
+}
+
+.item-list-single .arrow-icon-colors-down {
+  color: #EC3552;
+}
+
+.badge-tag-price {
+  background: transparent;
+  padding: .25rem .4rem;
+  border: solid 1px #e8e8e8;
+}
+
+.drop-gallery {
+  background-color: white;
+  padding: .5rem 1rem;
+  border-radius: .75rem !important;
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: .6px;
+  border: 0 !important;
+  box-shadow: 1px 3px 0px #EEEFF6;
+  min-height: 500px;
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+}
+
+.drop-gallery .label {
+  opacity: .6;
+}
+
+.drop-gallery .img-preview {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.drop-gallery ngx-dropzone-preview {
+  padding: 0 !important;
+  margin: 3px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 120px !important;
+  min-width: 120px !important;
+  background-color: #eaeaea;
+}
+
+.drop-gallery ngx-dropzone-preview:hover ngx-dropzone-label .zoom-icon {
+  display: block;
+}
+
+.drop-gallery ngx-dropzone-preview:hover ngx-dropzone-label {
+  background-color: rgba(203, 202, 210, 0.59);
+  box-shadow: 0 0 9px rgba(100, 99, 138, 0.86);
+}
+
+.img-background-gallery {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: .75rem;
+}
+
+.zoom-icon {
+  display: none;
+  opacity: .7;
+}
+
+ngx-dropzone-remove-badge {
+  background-color: rgb(34, 30, 205) !important
+}
+
+ngx-dropzone-label {
+  vertical-align: middle;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .75rem;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.overlay-loading {
+  background: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.overlay-loading .in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-50 {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4rem;
+}
+
+.modal-light-zoom .modal-content {
+  border: 0 !important;
+  /*max-width: 100%;*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+
+.modal-light-zoom .author {
+  position: absolute;
+  font-size: .7rem;
+  padding: .25rem .2rem;
+  opacity: .7;
+}
+
+.swal2-show {
+  box-shadow: 0 0 20px rgba(103, 103, 120, 0.45);
+  padding: 0 !important;
+}
+
+.swal2-content, .swal2-footer {
+  font-size: .8rem !important;
+}
+
+.swal2-footer {
+  padding: 1em !important;
+}
+
+.swal2-header {
+  padding: 1em 0em 0em !important;
+}
+
+.list-swipe {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  background-color: #F6F5FA;
+  font-size: .85rem;
+  text-rendering: optimizeLegibility;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: 0 0 0 !important;
+}
+
+.list-swipe .mark {
+  border: 0 !important;
+}
+
+/*.left-swipe {*/
+/*  transform: translate(0, 0)!important;*/
+/*}*/
+
+sw-item-list .options-btn.active {
+  transform: translate(50vw, 0) !important;
+}
+
+sw-item-list .list-swipe .mark {
+  display: none;
+}
+
+sw-item-list .left-swipe {
+  transform: translate(0, 0)
+}
+
+/*.paginate-list ul li {*/
+/*  margin: 0 .2rem;*/
+/*}*/
+/*.paginate-list .pagination li .page-link{*/
+/*  border: 0 !important;*/
+/*  border-radius: 5rem;*/
+/*  background-color: transparent;*/
+/*  font-weight: 600;*/
+/*  color: #221ecd;*/
+/*}*/
+/*.paginate-list .pagination li:active .page-link,*/
+/*.paginate-list .pagination li:hover .page-link{*/
+/*  color: white !important;*/
+/*  opacity: .8;*/
+
+/*}*/
+.btn-paginate {
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(188, 186, 202, 0.39);
+  font-size: .8rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: #7b789d;
+}
+
+.btn-paginate:hover {
+  box-shadow: 0 0 10px rgba(211, 211, 214, 0.61);
+  transform: scale(1.05);
+  background-color: #E9E5FD !important;
+  transition: all 200ms;
+  color: #3634a8;
+}
+
+.overlay-copilot {
+  background: rgba(150, 158, 195, 0.57);
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-copilot-focus {
+  z-index: 99;
+}
+
+.modal-light-plan .pulse-one {
+  animation: pulse-animation-one .85s 6;
+}
+
+@keyframes pulse-animation-one {
+  0% {
+    box-shadow: 0 0 0 0px rgba(34, 30, 205, 0.4)
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(34, 30, 205, 0)
+  }
+}
+
+.purchase-status-badge-paid {
+  background-color: rgba(44, 164, 46, 0.84);
+  padding: .5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.purchase-status-badge-hold {
+  background-color: rgba(251, 175, 148, 0.91);
+  padding: .5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.purchase-status-badge-process {
+  background-color: rgba(145, 140, 231, 0.9);
+  padding: .5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+
+.purchase-status-badge-exceptional {
+  background-color: rgba(1, 177, 255, 0.9);
+  padding: .5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.modal-wizard {
+  max-width: 100%;
+  position: fixed;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-wizard .modal-content {
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+.logo-drop ngx-file-picker {
+  max-width: 100%;
+  margin: auto;
+}
+
+.logo-drop ngx-file-picker .file-drop-wrapper {
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.logo-drop ngx-file-picker file-drop {
+  padding: 1rem 0;
+}
+
+.logo-drop #dropZone {
+  max-width: 100% !important;
+  border-color: #f1f1f1 !important;
+}
+
+.logo-drop file-preview-item {
+  max-width: 100%;
+}

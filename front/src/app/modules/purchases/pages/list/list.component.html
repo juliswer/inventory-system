@@ -1,0 +1,77 @@
+<ng-container *ngIf="mode === 'page'">
+  <app-header [history]="history"></app-header>
+  <app-side-bar></app-side-bar>
+</ng-container>
+
+<div class="w-100" [ngClass]="{'container-row d-flex':(mode === 'page')}">
+  <div *ngIf="mode === 'home'" class="col-12 mb-2">
+    <b class="text-muted">{{title}}</b>
+  </div>
+  <app-list-items
+    (cbAdd)="goTo()"
+    [(data)]="data"
+    [mode]="cbMode"
+    [customTemplate]="customTemplateSrc"
+    (cbSrc)="onSrc($event)"
+    class="col-12 row m-0 pl-2" [ngClass]="{'pr-4':(mode === 'list'),
+    'pr-0':(mode === 'home')}">
+  </app-list-items>
+</div>
+<!-- ***************** TEMPLATE ************** -->
+
+<ng-template #customTemplateSrc let-dat='dat'>
+  <ul [@listAnimation] *ngIf="dat?.length">
+    <li *ngFor="let inside of dat" [routerLink]="['/','purchase',inside?._id]">
+      <div class="d-flex item-list-single">
+        <!--Blocked 1-->
+        <div class="pl-2 pr-2 pt-1 pb-1 col-3">
+          <div class="d-flex">
+            <div>
+              <small class="text-muted">{{inside?.createdAt | date}}</small>
+              <h6 class="name mr-2">{{inside?.controlNumber}}</h6>
+            </div>
+          </div>
+        </div>
+        <!--Blocked-->
+        <!--Blocked 1-->
+        <div class="pl-2 pr-2 pt-1 pb-1 col-3">
+          <div class="d-flex">
+            <div>
+              <small class="text-muted">
+                <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                {{inside?.customer?.phone}}</small>
+              <h6 class="name mr-2">{{inside?.customer?.name}} {{inside?.customer?.lastName}}</h6>
+            </div>
+          </div>
+        </div>
+        <!--Blocked-->
+        <!--Blocked 1-->
+        <div class="pl-2 pr-2 pt-1 pb-1 col-3">
+          <div class="d-flex">
+            <div>
+              <h6 class="name mr-2">
+                {{currencySymbol}}
+                {{inside?.total | number:'1.2-2'}}
+                {{currency}}
+              </h6>
+            </div>
+          </div>
+        </div>
+        <!--Blocked-->
+        <!--Blocked 1-->
+        <div class="pl-2 pr-2 pt-1 pb-1 col-3">
+          <div class="d-flex justify-content-end ">
+            <div [ngClass]="{
+            'purchase-status-badge-paid':(inside.status === 'paid'),
+            'purchase-status-badge-hold':(inside.status === 'hold'),
+            'purchase-status-badge-process':(inside.status === 'process'),
+            'purchase-status-badge-exceptional':(inside.status === 'exceptional')
+            }">{{inside?.status}}</div>
+          </div>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+</ng-template>
+<!-- ***************** FIN TEMPLATE ************** -->

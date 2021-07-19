@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center flex-column align-items-center">
+  <div class="close-icon" (click)="close()">
+    <fa-icon [icon]="faTimes" size="2x"></fa-icon>
+  </div>
+  <div class="text-center w-100">
+    <h6 class="font-weight-bold p-2">
+      {{'WIZARD.TITLE'| translate}}
+    </h6>
+  </div>
+  <!--  <div class="p-0">-->
+  <!--    <ng-lottie-->
+  <!--      class="margin-auto"-->
+  <!--      height="200px"-->
+  <!--      [options]="options">-->
+  <!--    </ng-lottie>-->
+  <!--  </div>-->
+  <div class="p-2 text-content">
+    <!--    <hr>-->
+    <div [innerHTML]="'WIZARD.CONTENT' | translate"></div>
+    <hr>
+    <div>
+      <div class="text-center p-3" *ngIf="preview?.image">
+        <img class="avatar-preview" (click)="reset()"  [src]="preview?.image" alt="">
+      </div>
+
+      <div class="form-group logo-drop" *ngIf="!preview?.image">
+        <label>{{'WIZARD.FORM.LOGO' |translate}}</label>
+        <ngx-file-picker
+          [fileMaxCount]="1"
+          (fileAdded)="fileAdded($event)"
+          [fileExtensions]="['jpg', 'jpeg', 'png']"
+          [enableCropper]="false"
+          [showPreviewContainer]="false">
+          <div class="dropzoneTemplate text-center">
+            <small class="text-muted">{{'WIZARD.FORM.DRAG_ZONE' | translate}}</small>
+          </div>
+        </ngx-file-picker>
+        <small class="form-text text-muted">{{'WIZARD.FORM.LOGO_PLACEHOLDER' | translate}}</small>
+      </div>
+
+      <form class="form-product" [formGroup]="form" (ngSubmit)="update()">
+
+        <div class="form-group">
+          <label>{{'WIZARD.FORM.COMPANY' |translate}}</label>
+          <input type="text" class="form-control"
+                 placeholder="LeangaSoftware" formControlName="name">
+          <small class="form-text text-muted">{{'WIZARD.FORM.COMPANY_PLACEHOLDER' | translate}}</small>
+        </div>
+        <div class="form-group">
+          <label>{{'WIZARD.FORM.CURRENCY' |translate}}</label>
+          <input type="text" class="form-control" formControlName="currency" placeholder="EUR">
+          <small class="form-text text-muted">{{'WIZARD.FORM.CURRENCY_PLACEHOLDER' | translate}}</small>
+        </div>
+
+        <div class="form-group">
+          <label>{{'WIZARD.FORM.CURRENCY_SYMBOL' |translate}}</label>
+          <input type="text" class="form-control" formControlName="currencySymbol" placeholder="$">
+          <small class="form-text text-muted">{{'WIZARD.FORM.CURRENCY_SYMBOL_PLACEHOLDER' | translate}}</small>
+        </div>
+
+        <div class="text-center mt-4 mb-2">
+          <button [disabled]="!form.valid" class="btn btn-primary btn-radius">
+            {{'UPGRADE.UPGRADE_OK' | translate}}
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
